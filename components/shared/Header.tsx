@@ -35,9 +35,6 @@ const Header = () => {
         <Link href="/sign-in" passHref>
           <Button className="rounded-full" size="lg">Login</Button>
         </Link>
-        <Link href="/sign-up" passHref>
-          <Button className="rounded-full" size="lg" variant="outline">Sign Up</Button>
-        </Link>
       </SignedOut>
 
         </div>
