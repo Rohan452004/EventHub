@@ -1,14 +1,24 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from 'next/image';
 import { Separator } from "@/components/ui/separator";
 import NavItems from './NavItems';
 
 const MobileNav = () => {
+  // State to control the sheet open/close status
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to close the sheet
+  const closeSheet = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="md:hidden">
-      <Sheet>
-        <SheetTrigger className="align-middle">
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger className="align-middle" onClick={() => setIsOpen(true)}>
           <Image
             src="/assets/icons/menu.svg"
             alt="Menu"
@@ -31,8 +41,8 @@ const MobileNav = () => {
 
           <Separator className="border border-gray-200" />
 
-          <NavItems />
-
+          {/* Pass the close function to NavItems */}
+          <NavItems onClick={closeSheet} />
         </SheetContent>
       </Sheet>
     </nav>

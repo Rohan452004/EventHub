@@ -48,14 +48,15 @@ export const formatDateTime = (dateString: Date) => {
 export const convertFileToUrl = (file: File) => URL.createObjectURL(file)
 
 export const formatPrice = (price: string) => {
-  const amount = parseFloat(price)
-  const formattedPrice = new Intl.NumberFormat('en-US', {
+  const amount = parseFloat(price);
+  const formattedPrice = new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
-  }).format(amount)
+    currency: 'INR',
+  }).format(amount);
 
-  return formattedPrice
+  return formattedPrice;
 }
+
 
 export function formUrlQuery({ params, key, value }: UrlQueryParams) {
   const currentUrl = qs.parse(params)
