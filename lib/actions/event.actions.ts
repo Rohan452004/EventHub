@@ -35,6 +35,11 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
     const organizer = await User.findById(userId)
     if (!organizer) throw new Error('Organizer not found')
 
+    const isAdmin = organizer.email === process.env.ADMIN_EMAIL;
+    if (!isAdmin) {
+      throw new Error("Unauthorized: Only admins can create events");
+    }
+
     const newEvent = await Event.create({ 
       ...event, 
       category: event.categoryId, 
