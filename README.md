@@ -1,8 +1,20 @@
-# **EventHub - Event Organization Web App** 🎉
+# **EventHub - College Event Management Platform** 🎉
 
-EventHub is a **full-featured event organization platform** inspired by platforms like **Eventbrite** or **Meetup**, designed to streamline **event management, registration, payments, and checkout**. With a focus on **authentication, filtering, and smooth UX**, EventHub empowers organizers and participants to effortlessly engage with events.
+EventHub is a **comprehensive event management platform** specifically designed to meet the needs of college communities. Inspired by platforms like **Eventbrite** and **Meetup**, EventHub enables colleges to easily organize, manage, and promote campus events. With streamlined tools for **event registration, ticketing, role-based permissions, and event discovery**, EventHub helps students and faculty stay engaged and informed about upcoming campus activities.
 
-This project leverages **Next.js 14, Tailwind CSS, Clerk, Stripe, and Mongoose** for a modern, scalable event management system.
+Built with **Next.js 14, Tailwind CSS, Clerk, Stripe, and Mongoose**, EventHub offers a secure, scalable, and user-friendly solution to enhance college event experiences.
+
+---
+
+## Features
+
+- **Event Creation & Management**: Admins can create, update, and manage events with ease.
+- **User Registration & Authentication**: Secure sign-up and login powered by Clerk.
+- **Role-Based Access**: Only designated admins have permissions to create events, while all other users can register for events.
+- **Ticketing & Payments**: Integrated with Stripe for easy payment processing and ticketing.
+- **Event Search & Filtering**: Users can explore and filter events by categories, dates, and keywords.
+- **Mobile-Responsive Design**: Seamless experience across desktop and mobile devices.
+- **Real-Time Updates**: Get the latest event details and status changes immediately.
 
 ---
 ## 🛠️ **Tech Stack**
@@ -73,6 +85,9 @@ Create a new file named `.env` in the root of your project and add the following
     STRIPE_SECRET_KEY=
     STRIPE_WEBHOOK_SECRET=
     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
+    # ADMIN
+    NEXT_PUBLIC_ADMIN_EMAIL=
 
 **Note**: Replace the placeholder values with your actual credentials.
 
